@@ -1,0 +1,314 @@
+    /*=========================Common Style==================================*/
+    
+    body {
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    a {
+        text-decoration: none;
+        display: inline-block;
+    }
+    
+    ul,
+    li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .container {
+        max-width: 1170px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    
+    .bold {
+        font-weight: bold;
+    }
+    /*=====================================Header==================================*/
+    
+    .header {
+        background: linear-gradient(rgba(31, 32, 33, 0.79), rgba(31, 32, 33, 0.79)), url(../img/header.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        max-height: 252px;
+    }
+    
+    .header__inner {
+        padding-top: 39px;
+        padding-bottom: 66px;
+        color: #ffffff;
+    }
+    
+    .header__top {
+        display: flex;
+        justify-content: space-between;
+    }
+    /*=====Menu======*/
+    
+    .menu__list {
+        width: 500px;
+        text-align: center;
+    }
+    
+    .menu__list li {
+        display: inline;
+    }
+    
+    .menu__list a {
+        display: inline-block;
+        width: 100px;
+        padding: 5px 10px;
+    }
+    
+    .menu__list a:hover {
+        text-decoration: underline;
+    }
+    /*==================================*/
+    
+    .header__call {}
+    
+    .header__call__telephone {
+        font-weight: bold;
+        font-size: 24px;
+    }
+    
+    .header__call_text {
+        font-size: 18px;
+    }
+    
+    .header__content {
+        font-size: 38px;
+    }
+    /*==================Filtres==============*/
+    
+    .filter__inner {
+        display: flex;
+    }
+    
+    .sortPrice,
+    .sortAge {
+        padding-right: 40px;
+        padding-left: 30px;
+        position: relative;
+    }
+    
+    .sortPrice::after,
+    .sortAge::after {
+        content: " ";
+        width: 15px;
+        height: 8px;
+        position: absolute;
+        top: 8px;
+        right: 0px;
+        background-image: url('../img/sortArrow.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    /*==================Content==============*/
+    
+    .content__inner {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        margin: auto;
+        background-color: #f3f3f3;
+        margin-bottom: 40px;
+        position: relative;
+    }
+    
+    .card::after {
+        content: " ";
+        width: 46px;
+        height: 40px;
+        position: absolute;
+        top: 20px;
+        left: 80%;
+        background-image: url('../img/heart.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .price {
+        color: black;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    .card button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #6EBBD3;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    
+    .black button {
+        background-color: black;
+    }
+    
+    .card button:hover {
+        opacity: 0.7;
+    }
+    
+    .card__inner {
+        padding-left: 30px;
+    }
+    
+    .tabl {
+        font-size: 12px;
+    }
+    
+    .tabl td {
+        padding-right: 20px;
+    }
+    
+    .decor {
+        position: relative;
+    }
+    
+    .decor::before {
+        content: "";
+        width: 4px;
+        height: 26px;
+        position: absolute;
+        top: 20%;
+        left: -10px;
+        background-color: #6EBBD3;
+    }
+    
+    .noInShop {
+        background-color: black;
+    }
+    /*==================Footer===============*/
+    
+    .footer {
+        background-color: #1F2021;
+        color: #ffffff;
+    }
+    
+    .footer__inner {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 83px;
+        padding-bottom: 92px;
+    }
+    
+    .footer__header {
+        font-size: 48px;
+        line-height: 59px;
+        font-weight: bold;
+    }
+    
+    .footer__subtitle {
+        font-size: 28px;
+        line-height: 25px;
+        padding-top: 26px;
+    }
+    
+    .common__input {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+    }
+    
+    .common__btn {
+        padding: 10px 50px;
+        border-radius: 5px;
+        background-color: #6EBBD3;
+        color: #ffffff;
+        border: none;
+    }
+    
+    .common__check {
+        margin-top: 24px;
+    }
+    /*========================Media Quaries==============================*/
+    
+    @media (max-width: 575px) {
+        .header {
+            max-height: 100%;
+        }
+        .header__top {
+            flex-direction: column;
+        }
+        .header__inner {
+            padding-bottom: 20px;
+            padding-top: 10px;
+        }
+        .header__content {
+            font-size: 20px;
+        }
+        .menu__list {
+            display: flex;
+            flex-direction: column;
+        }
+        .footer__inner {
+            flex-direction: column;
+            align-items: center;
+        }
+        .common__input {
+            margin-top: 20px;
+        }
+    }
+    /* sm (>=576 и <=767) */
+    
+    @media (min-width: 576px) and (max-width: 767px) {
+        .common__input {
+            margin-bottom: 20px;
+        }
+        .header__call__telephone {
+            font-size: 16px;
+        }
+        .header__call_text {
+            font-size: 14px;
+        }
+        .menu__list {
+            width: 300px;
+            text-align: center;
+        }
+        .menu__list a {
+            display: inline-block;
+            width: 60px;
+            padding: 5px 10px;
+        }
+        .header__content {
+            font-size: 28px;
+        }
+    }
+    /* md (>=768 и <=991) */
+    
+    @media (min-width: 768px) and (max-width: 991px) {
+        .common__input {
+            margin-bottom: 20px;
+        }
+        .menu__list {
+            width: 400px;
+            text-align: center;
+        }
+        .menu__list a {
+            display: inline-block;
+            width: 60px;
+            padding: 5px 10px;
+        }
+    }
+    /* lg (>=992 и <=1199) */
+    
+    @media (min-width: 992px) and (max-width: 1199px) {}
+    /* xl (>=1200) */
+    
+    @media (min-width: 1200px) {}
